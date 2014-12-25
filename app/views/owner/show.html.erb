@@ -2,3 +2,9 @@
 <p><strong>Name:</strong> <%= @owner.name %></p>
 <p><strong>Email:</strong> <%= @owner.email %></p>
 <p><strong>Number of vehicles:</strong> <%= @owner.number_of_vehicles %></p>
+<h2>All vehicles:</h2>
+<ul>
+	<%= @cars.each do |car| %>
+		<li><%= link_to(car) do %><%= car.year %> <%= car.make %> <%= car.model %><% end %></li>
+	<% end %>
+</ul>

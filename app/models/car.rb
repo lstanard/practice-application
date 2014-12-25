@@ -1,5 +1,5 @@
 class Car < ActiveRecord::Base
-	# belongs_to :owner
+	belongs_to :owner
 
 	before_save :downcase_color
 	validates :make, presence: true

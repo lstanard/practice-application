@@ -16,6 +16,7 @@ class CarController < ApplicationController
 
 	def show
 		@car = Car.find(params[:id])
+		@owner = Owner.find_by(id: @car.owner_id)
 	end
 
 	def edit

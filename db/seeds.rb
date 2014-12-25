@@ -6,18 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Owner.create(name: "Charlie Stanard",
+			 email: "charlie.stanard@ervinandsmith.com",
+			 number_of_vehicles: "")
+
 Car.create(make: "Toyota",
 		   model: "Rav4",
 		   year: 2000,
 		   color: "Blue",
-		   vehicle_type: "SUV")
+		   vehicle_type: "SUV",
+		   owner_id_id: 1)
 
 Car.create(make: "Chevrolet",
 		   model: "Aveo",
 		   year: 2007,
 		   color: "Red",
-		   vehicle_type: "Compact")
-
-Owner.create(name: "Charlie Stanard",
-			 email: "charlie.stanard@ervinandsmith.com",
-			 number_of_vehicles: 2)
+		   vehicle_type: "Compact",
+		   owner_id_id: 1)
