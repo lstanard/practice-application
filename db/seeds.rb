@@ -18,10 +18,6 @@ Car.create(make: "Chevrolet",
 		   color: "Red",
 		   vehicle_type: "Compact")
 
-# Owner.create(name: "Charlie Stanard",
-# 			 email: "charlie.stanard@ervinandsmith.com",
-# 			 age: 28)
-
-# Owner.create(name: "Bob Jones",
-# 			 email: "bob.jones@ervinandsmith.com",
-# 			 age: 45)
+Owner.create(name: "Charlie Stanard",
+			 email: "charlie.stanard@ervinandsmith.com",
+			 number_of_vehicles: 2)

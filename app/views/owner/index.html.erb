@@ -1,0 +1,6 @@
+<h1>Index: List all users</h1>
+<ol>
+<% @owners.each do |owner| %>
+	<li><%= link_to(owner) do %><%= owner.name %><% end %> <br /><%= owner.email %> <br /> Number of vehicles: <%= owner.number_of_vehicles %> (<%= link_to "Edit", edit_owner_path(owner) %>)</li>
+<% end %>
+</ol>
