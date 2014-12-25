@@ -7,18 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-	<ul>
-		<li><%= link_to "Home", root_path %></li>
-		<li><%= link_to "View all cars", cars_path %></li>
-		<li><%= link_to "Add a new car", new_car_path %></li>
-		<li><%=	link_to "View all owners", owners_path %></li>
-		<li><%= link_to "Add a new owner", new_owner_path %></li>
-	</ul>
-</header>
-<%= yield %>
-
+<div class="wrapper">
+	<header class="navbar navbar-fixed-top navbar-inverse">
+	  <div class="container">
+	    <%= link_to "Practice App", root_path, id: "logo" %>
+	    <nav>
+	      <ul class="nav navbar-nav pull-right">
+			<li><%= link_to "Cars", cars_path %></li>
+			<li><%=	link_to "Owners", owners_path %></li>
+	      </ul>
+	    </nav>
+	  </div>
+	</header>
+	<%= yield %>
+</div>
 <!-- <%= debug @project %> -->
-
 </body>
 </html>
