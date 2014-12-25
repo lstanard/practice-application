@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PracticeApp</title>
+  <title>Practice Rails Application</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+	<ul>
+		<li><%= link_to "Home", root_path %></li>
+		<li><%= link_to "View all cars", cars_path %></li>
+		<li><%= link_to "Add a new car", new_car_path %></li>
+	</ul>
+</header>
 <%= yield %>
+
+<!-- <%= debug @project %> -->
 
 </body>
 </html>

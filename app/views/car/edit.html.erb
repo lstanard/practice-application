@@ -1,0 +1,14 @@
+<h1>Edit: Edit car</h1>
+<%= form_for(@car) do |f| %>
+	<%= f.label :make %>
+	<%= f.text_field :make, class: 'form-control' %>
+	<%= f.label :model %>
+	<%= f.text_field :model, class: 'form-control' %>
+	<%= f.label :year %>
+	<%= f.text_field :year, class: 'form-control' %>
+	<%= f.label :color %>
+	<%= f.text_field :color, class: 'form-control' %>
+	<%= f.label :vehicle_type %>
+	<%= f.text_field :vehicle_type, class: 'form-control' %>
+	<%= f.submit "Save", class: 'btn' %>
+<% end %>
