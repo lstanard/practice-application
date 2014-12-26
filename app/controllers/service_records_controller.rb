@@ -13,7 +13,7 @@ class ServiceRecordsController < ApplicationController
 
   def show
   	@service_record = ServiceRecord.find(params[:id])
-  	@car = Car.find_by(id: @service_record.car_id)
+    @car = @service_record.car
   end
 
   def edit

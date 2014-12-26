@@ -2,13 +2,12 @@
 
 === TODO
 
-- Ability to delete a car
-- Ability to upload an image for a car
+- ~Refactor code so cars are directly related to owners~
 - Add service records for a vehicle
-	- Add a service record
+	- ~Add a service record~
 	- Delete a service record
 	- Edit a service record
-- Install Compass
-- Search feature
 - Add RSpec tests
-- ~Refactor code so cars are directly related to owners~
+- Ability to delete a car
+- Ability to upload an image for a car
+- Search feature
