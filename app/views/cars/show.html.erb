@@ -1,9 +1,17 @@
 <div class="container">
-	<%= link_to "Edit this vehicle", edit_car_path(@car), class: "btn btn-primary pull-right" %>
+	<%= link_to "Edit this vehicle", edit_car_path(@car), class: "btn btn-primary" %>
+	<%= link_to "New service record", new_service_record_path(:car => @car.id), class: "btn btn-primary" %>
 	<h1><%= @car.make %> <%= @car.model %></h1>
 	<p><strong>Vehicle year:</strong> <%= @car.year %></p>
 	<p><strong>Vehicle color:</strong> <%= @car.color %></p>
 	<p><strong>Vehicle type:</strong> <%= @car.vehicle_type %></p>
 	<p><strong>Owned by:</strong> <%= link_to(@owner) do %> <%= @owner.name %><% end %></p>
 	<p><strong>Created:</strong> Posted <%= time_ago_in_words(@car.created_at) %> ago.</p>
+	<hr>
+	<h3>Service records</h3>
+	<ol>
+		<% @service_records.each do |record| %>
+			<li><%= link_to(record) do %><%= record.title %><% end %></li>
+		<% end %>
+	</ol>
 </div>

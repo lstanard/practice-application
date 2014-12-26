@@ -1,4 +1,4 @@
-class CarController < ApplicationController
+class CarsController < ApplicationController
 
 	def index
 		@cars = Car.all
@@ -16,7 +16,8 @@ class CarController < ApplicationController
 
 	def show
 		@car = Car.find(params[:id])
-		@owner = Owner.find_by(id: @car.owner_id)
+		@owner = @car.owner
+		@service_records = @car.service_records
 	end
 
 	def edit

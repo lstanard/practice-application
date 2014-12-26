@@ -1,0 +1,10 @@
+<div class="container">
+	<h1>Service Record</h1>
+	<h3>Title: <%= @service_record.title %></h3>
+	<hr>
+	<h4>Occured: <%= @service_record.occured %></h4>
+	<h4>Vehicle: <%= link_to(@car) do %> <%= @car.year %> <%= @car.make %> <%= @car.model %><% end %></h4>
+	<br>
+	<p><strong>Description:</strong></p>
+	<p><%= @service_record.description %></p>
+</div>
