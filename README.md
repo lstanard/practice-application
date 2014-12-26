@@ -11,4 +11,4 @@
 - Install Compass
 - Search feature
 - Add RSpec tests
-- Refactor code so cars are directly related to owners
+- ~Refactor code so cars are directly related to owners~

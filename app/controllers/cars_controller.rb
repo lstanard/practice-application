@@ -6,6 +6,7 @@ class CarsController < ApplicationController
 
 	def new
 		@car = Car.new
+		@owner = Owner.find(params[:owner])
 	end
 
 	def create
@@ -33,7 +34,7 @@ class CarsController < ApplicationController
 	private
 
 		def car_params
-			params.require(:car).permit(:make, :model, :year, :color, :vehicle_type)
+			params.require(:car).permit(:make, :model, :year, :color, :vehicle_type, :owner_id)
 		end
 
 end
