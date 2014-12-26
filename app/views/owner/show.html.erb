@@ -1,12 +1,19 @@
 <div class="container">
+	<%= link_to "Edit this profile", edit_owner_path(@owner), class: "btn btn-primary pull-right" %>
 	<h1>Show: User profile page</h1>
-	<p><strong>Name:</strong> <%= @owner.name %></p>
-	<p><strong>Email:</strong> <%= @owner.email %></p>
-	<p><strong>Number of vehicles:</strong> <%= @owner.number_of_vehicles %></p>
-	<h2>All vehicles:</h2>
-	<ul>
-		<%= @cars.each do |car| %>
-			<li><%= link_to(car) do %><%= car.year %> <%= car.make %> <%= car.model %><% end %></li>
-		<% end %>
-	</ul>
+	<div class="row">
+		<div class="col-md-4">
+			<p><strong>Name:</strong> <%= @owner.name %></p>
+			<p><strong>Email:</strong> <%= @owner.email %></p>
+			<p><strong>Number of vehicles:</strong> <%= @owner.cars.count %></p>
+		</div>
+		<div class="col-md-8">
+			<h2>All vehicles:</h2>
+			<ul>
+				<% @owner.cars.each do |car| %>
+					<li><%= link_to(car) do %><%= car.year %> <%= car.make %> <%= car.model %><% end %></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
 </div>

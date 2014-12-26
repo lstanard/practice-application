@@ -5,4 +5,5 @@
 	<p><strong>Vehicle color:</strong> <%= @car.color %></p>
 	<p><strong>Vehicle type:</strong> <%= @car.vehicle_type %></p>
 	<p><strong>Owned by:</strong> <%= link_to(@owner) do %> <%= @owner.name %><% end %></p>
+	<p><strong>Created:</strong> Posted <%= time_ago_in_words(@car.created_at) %> ago.</p>
 </div>
