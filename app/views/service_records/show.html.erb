@@ -1,4 +1,6 @@
 <div class="container">
+	<%= link_to "Edit this record", edit_service_record_path(@service_record), class: "btn btn-primary" %>
+	<%= link_to "Delete this record", service_record_path, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
 	<h1>Service Record</h1>
 	<h3>Title: <%= @service_record.title %></h3>
 	<hr>

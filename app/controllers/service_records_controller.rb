@@ -20,6 +20,19 @@ class ServiceRecordsController < ApplicationController
   	@service_record = ServiceRecord.find(params[:id])
   end
 
+  def update
+    @service_record = ServiceRecord.find(params[:id])
+    @service_record.update_attributes(record_params)
+    redirect_to @service_record
+  end
+
+  def destroy
+    @service_record = ServiceRecord.find(params[:id])
+    @car = @service_record.car
+    @service_record.destroy
+    redirect_to @car
+  end
+
   private
 
 		def record_params
